@@ -99,10 +99,6 @@ try:
     print('add_card_button passed')
 except:
     print('add_card_button failed')
-
-
-
-
 # close browser
 driver.quit()
 
