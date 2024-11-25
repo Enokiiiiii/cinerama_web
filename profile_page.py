@@ -24,12 +24,12 @@ def test_Autorisation():
     wait = WebDriverWait(driver, 3)
     login = wait.until(EC.presence_of_element_located((By.ID, 'username')))
     login.click()
-    login.send_keys('konstantin_bro')
+    login.send_keys('')
 
     wait = WebDriverWait(driver, 3)
     password = wait.until(EC.presence_of_element_located((By.ID, 'password')))
     password.click()
-    password.send_keys('full_name')
+    password.send_keys('')
 
     enter_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//button[text()="Продолжить"]')))
     enter_button.click()
