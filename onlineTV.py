@@ -10,6 +10,9 @@ from selenium.common.exceptions import TimeoutException
 
 driver = webdriver.Firefox()
 driver.get('https://info.cinerama.uz/ru/online-tv')
+pas_alert = driver.switch_to.alert
+pas_alert.send_keys('good-job')
+pas_alert.accept()
 wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'OnlineTvListView_sectionHeading__Gx8Ol')))
 
 wait = WebDriverWait(driver, 5)
