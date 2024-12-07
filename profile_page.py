@@ -11,29 +11,6 @@ from selenium.common.exceptions import TimeoutException
 driver = webdriver.Firefox()
 driver.get('https://info.cinerama.uz/ru')
 
-# Authorisation
-def test_Autorisation():
-    wait = WebDriverWait(driver, 5)
-    enter = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[text()='Войти']")))
-    enter.click()
-
-    wait = WebDriverWait(driver, 2)
-    login_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[text()='C помощью логина']")))
-    login_button.click()
-
-    wait = WebDriverWait(driver, 3)
-    login = wait.until(EC.presence_of_element_located((By.ID, 'username')))
-    login.click()
-    login.send_keys('')
-
-    wait = WebDriverWait(driver, 3)
-    password = wait.until(EC.presence_of_element_located((By.ID, 'password')))
-    password.click()
-    password.send_keys('')
-
-    enter_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//button[text()="Продолжить"]')))
-    enter_button.click()
-    time.sleep(2)
 
 #open profile page
 def test_Open_profilepage():
